@@ -1,0 +1,9 @@
+{
+  "timestamp": "20250603_144833",
+  "database_url": "sqlite:///D:\\os\\dev.db",
+  "backup_type": "full",
+  "items": {
+    "users": 2,
+    "encrypted_data": 1
+  }
+}

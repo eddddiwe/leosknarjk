@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "username": "testuser",
+    "password_hash": "scrypt:32768:8:1$0yY4FvAoyOrVga9o$1d4fa2844c3804c159fe986ea78e863e11fff0d7aba67f98ec2f73c516737e7f0496e879db2b84ae795472b5ac0832c28ccc31693ce17e3f378cec70e8972394",
+    "email": "testuser@example.com",
+    "created_at": "2025-06-03T12:00:16.662074"
+  },
+  {
+    "id": 2,
+    "username": "admin",
+    "password_hash": "scrypt:32768:8:1$g7f6Rn9SpBYC5UXf$3737f9b4b0ffe0484f9f65fa7d4949baa85c87fc356b878ae0f77e1ef2cd2e538f060e31ac9e82688bf0f47c7c2522a69bd897f1e65cae6386a004cfb11865f3",
+    "email": "admin@example.com",
+    "created_at": "2025-06-03T12:00:16.727356"
+  }
+]

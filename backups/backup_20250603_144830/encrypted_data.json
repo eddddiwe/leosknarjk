@@ -1,0 +1,10 @@
+[
+  {
+    "id": 1,
+    "user_id": 2,
+    "data_type": "password",
+    "encrypted_content": "gAAAAABoPuebtHfkN3RFGuLLEElQ08TiY-t87HOUvBdiPSLa0_CFBGMTmlNPpq9d8uokU0QpJzdq4W4r1dSGaKWRQTUcQEQ2xQ==",
+    "created_at": "2025-06-03T12:16:27.435523",
+    "updated_at": "2025-06-03T12:20:39.840939"
+  }
+]
