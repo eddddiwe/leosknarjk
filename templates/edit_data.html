@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-8">
+        <div class="card">
+            <div class="card-body">
+                <h3 class="card-title mb-4">
+                    <i class="fas fa-edit me-2"></i>Edit Data
+                </h3>
+                <form method="POST" action="{{ url_for('edit_data', data_id=data.id) }}">
+                    <div class="mb-3">
+                        <label for="data_type" class="form-label">Data Type</label>
+                        <select class="form-select" id="data_type" name="data_type" required>
+                            <option value="">Select a type...</option>
+                            <option value="password" {% if data.data_type == 'password' %}selected{% endif %}>Password</option>
+                            <option value="note" {% if data.data_type == 'note' %}selected{% endif %}>Secure Note</option>
+                            <option value="credit_card" {% if data.data_type == 'credit_card' %}selected{% endif %}>Credit Card</option>
+                            <option value="bank_account" {% if data.data_type == 'bank_account' %}selected{% endif %}>Bank Account</option>
+                            <option value="personal_info" {% if data.data_type == 'personal_info' %}selected{% endif %}>Personal Information</option>
+                            <option value="other" {% if data.data_type == 'other' %}selected{% endif %}>Other</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="content" class="form-label">Content</label>
+                        <textarea class="form-control" id="content" name="content" rows="5" required>{{ data.content }}</textarea>
+                        <div class="form-text">
+                            Your data will be encrypted before storage.
+                        </div>
+                    </div>
+                    <div class="d-grid gap-2">
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-save me-2"></i>Save Changes
+                        </button>
+                        <a href="{{ url_for('dashboard') }}" class="btn btn-outline-secondary">
+                            <i class="fas fa-times me-2"></i>Cancel
+                        </a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %} 

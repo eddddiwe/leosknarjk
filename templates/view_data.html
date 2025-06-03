@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-8">
+        <div class="card">
+            <div class="card-body">
+                <h3 class="card-title mb-4">
+                    <i class="fas fa-file-alt me-2"></i>{{ data.data_type|title }}
+                </h3>
+                <div class="mb-4">
+                    <h5 class="text-muted">Content</h5>
+                    <div class="card bg-light">
+                        <div class="card-body">
+                            <pre class="mb-0">{{ data.content }}</pre>
+                        </div>
+                    </div>
+                </div>
+                <div class="mb-4">
+                    <h5 class="text-muted">Details</h5>
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <i class="fas fa-calendar me-2"></i>Created: {{ data.created_at.strftime('%Y-%m-%d %H:%M') }}
+                        </li>
+                        <li class="list-group-item">
+                            <i class="fas fa-clock me-2"></i>Last Updated: {{ data.updated_at.strftime('%Y-%m-%d %H:%M') }}
+                        </li>
+                    </ul>
+                </div>
+                <div class="d-grid gap-2">
+                    <a href="{{ url_for('edit_data', data_id=data.id) }}" class="btn btn-primary">
+                        <i class="fas fa-edit me-2"></i>Edit
+                    </a>
+                    <form method="POST" action="{{ url_for('delete_data', data_id=data.id) }}" class="d-inline">
+                        <button type="submit" class="btn btn-danger w-100" onclick="return confirm('Are you sure you want to delete this data?')">
+                            <i class="fas fa-trash-alt me-2"></i>Delete
+                        </button>
+                    </form>
+                    <a href="{{ url_for('dashboard') }}" class="btn btn-outline-secondary">
+                        <i class="fas fa-arrow-left me-2"></i>Back to Dashboard
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %} 

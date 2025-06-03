@@ -1,0 +1,1 @@
+ C:\Users\leosknark\AppData\Roaming\Python\Python313\Scripts\waitress-serve --listen=0.0.0.0:5000 app:app
